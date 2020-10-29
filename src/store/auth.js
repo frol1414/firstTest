@@ -31,8 +31,8 @@ export default {
     actions: {
         async signIn ({dispatch}, credentials) {
             console.log(credentials)
-            await axios.get('/sanctum/csrf-cookie')
-            await axios.post('/login', credentials)
+            // await axios.get('/sanctum/csrf-cookie', {withCredentials: true})
+            await axios.post('api/sanctum/token', credentials)
 
             return dispatch('me')
         },

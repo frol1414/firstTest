@@ -30,7 +30,7 @@ name: "login",
     }),
     async login() {
       console.log(111)
-      await this.signIn({email: this.email, password: this.password})
+      await this.signIn({email: this.email, password: this.password, device_name: 'tips'})
 
     }
   }
